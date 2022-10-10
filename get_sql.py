@@ -73,7 +73,7 @@ class Sql:
         return sql4
 
     def get_difference_count(self):
-        sql5 = 'select t.single_diff,count(*) as numbers from ' + "({}) as t group by t.single_diff;".format(
+        sql5 = "select split(t.single_diff,'&#')[0] as single_diff,count(*) as numbers from " + "({}) as t group by split(t.single_diff,'&#')[0];".format(
             self.get_sql2())
         return sql5
 
