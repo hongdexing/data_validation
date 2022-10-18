@@ -19,7 +19,7 @@ class Sql:
         self.b_filter = conf.get('tables', 'b_filter')
         self.table1 = conf.get('tables', 'table1').replace(' ', '')
         self.table2 = conf.get('tables', 'table2').replace(' ', '')
-        self.relation = conf.get('tables', 'relation').replace(' ', '')
+        self.relation = conf.get('tables', 'relation')
         self.field1 = conf.get('field', 'table1').replace(' ', '')
         self.field2 = conf.get('field', 'table2').replace(' ', '')
 
